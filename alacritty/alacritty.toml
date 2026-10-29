@@ -1,0 +1,69 @@
+colors.draw_bold_text_with_bright_colors = true
+
+[colors.primary]
+background = "#0a0a0a"  # Gotham night
+foreground = "#e0e0e0"  # Bat-signal white
+
+[colors.normal]
+black   = "#000000"     # Pure black
+red     = "#c43e1c"     # Batman red (subtle)
+green   = "#5c6a42"     # Dark green (for code comments)
+yellow  = "#ffd700"     # Gold (Bat-symbol highlight)
+blue    = "#2e5c8a"     # Dark blue (Gotham skies)
+magenta = "#8b5a8c"     # Deep purple (Joker’s shadow)
+cyan    = "#5c8a8a"     # Teal (Wayne Enterprises tech)
+white   = "#e0e0e0"     # Light gray
+
+[colors.bright]
+black   = "#3a3a3a"     # Dark gray
+red     = "#ff5555"     # Alert red
+green   = "#a1c659"     # Highlight green
+yellow  = "#ffd700"     # Gold (Batcomputer glow)
+blue    = "#5c8aae"     # Soft blue
+magenta = "#b294bb"     # Muted purple
+cyan    = "#8abeb7"     # Teal (WayneTech UI)
+white   = "#ffffff"     # Pure white
+
+[cursor]
+thickness = 0.15
+
+[cursor.style]
+blinking = "On"
+shape = "Beam"
+
+[font]
+size = 12.0
+
+[font.bold]
+family = "FiraCode Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "FiraCode Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "FiraCode Nerd Font"
+style = "Regular"
+
+[terminal.shell]
+program = "/usr/bin/fish"
+
+[window]
+dynamic_padding = true
+opacity = 0.9
+blur = true
+decorations = "None"
+
+[window.dimensions]
+columns = 100
+lines = 30
+
+[window.padding]
+x = 8
+y = 8
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"

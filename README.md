@@ -5,6 +5,7 @@ Personal dotfiles.
 | Dir | Contents |
 | --- | --- |
 | `nvim/` | Neovim 0.12 + [LazyVim](https://lazyvim.org) config, with the Gotham colourscheme |
+| `alacritty/` | [Alacritty](https://alacritty.org) terminal config (Gotham colours, FiraCode Nerd Font) |
 | `fastfetch/` | [fastfetch](https://github.com/fastfetch-cli/fastfetch) system info with a Batman logo |
 
 ## nvim
@@ -58,3 +59,20 @@ mkdir -p ~/.config/fastfetch && cp ~/configs/fastfetch/* ~/.config/fastfetch/
 ```
 
 Install fastfetch with `winget install Fastfetch-cli.Fastfetch` on Windows. Run `fastfetch` to try it.
+
+## alacritty
+
+`alacritty/alacritty.toml` has the Gotham colours, FiraCode Nerd Font 12, a slightly transparent blurred window and one custom key binding.
+
+| OS | Put it at |
+| --- | --- |
+| Linux / macOS | `~/.config/alacritty/alacritty.toml` |
+| Windows | `%APPDATA%\alacritty\alacritty.toml` |
+
+```powershell
+# Windows (PowerShell)
+New-Item -ItemType Directory -Force $env:APPDATA\alacritty
+Copy-Item $HOME\configs\alacritty\alacritty.toml $env:APPDATA\alacritty\
+```
+
+On Windows, change the `[terminal.shell]` section: it launches `/usr/bin/fish`, which doesn't exist there. Use `program = "powershell"` or delete the section to get the default shell. Install the Nerd Font first (see the fzf section), or the font setting falls back to a default one. Install Alacritty with `winget install Alacritty.Alacritty`.

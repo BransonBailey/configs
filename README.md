@@ -68,4 +68,4 @@ $ENV:STARSHIP_CONFIG = "$HOME\configs\starship\starship.toml"
 Invoke-Expression (&starship init powershell)
 ```
 
-The icons need a [Nerd Font](https://www.nerdfonts.com) in the terminal (I use FiraCode Nerd Font). Install it with `winget install Starship.Starship` for the prompt itself.
+The icons need a [Nerd Font](https://www.nerdfonts.com) in the terminal (I use FiraCode Nerd Font). On Windows, install Starship itself with `winget install Starship.Starship`.

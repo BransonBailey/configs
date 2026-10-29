@@ -5,7 +5,6 @@ Personal dotfiles.
 | Dir | Contents |
 | --- | --- |
 | `nvim/` | Neovim 0.12 + [LazyVim](https://lazyvim.org) config, with the Gotham colourscheme |
-| `starship/` | [Starship](https://starship.rs) prompt config (Gotham palette) |
 
 ## nvim
 
@@ -48,24 +47,3 @@ Import-Module PSFzf
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
 Set-PSReadLineKeyHandler -Key Alt+c -ScriptBlock { Invoke-FzfSetLocation }
 ```
-
-## starship
-
-`starship/starship.toml` is a two-line prompt: directory, git branch and status on the left, language versions (Python, Node, Go, Rust, ...) and command duration on the right, then the prompt character. The colours come from the `gotham` palette at the bottom of the file; change `palette = 'gotham'` to `'nord'` or `'onedark'` to switch.
-
-Starship only reads `~/.config/starship.toml` by default, so point it at the file instead of copying:
-
-```sh
-# fish
-set -Ux STARSHIP_CONFIG ~/configs/starship/starship.toml
-# bash/zsh
-export STARSHIP_CONFIG=~/configs/starship/starship.toml
-```
-
-```powershell
-# PowerShell: put in $PROFILE
-$ENV:STARSHIP_CONFIG = "$HOME\configs\starship\starship.toml"
-Invoke-Expression (&starship init powershell)
-```
-
-The icons need a [Nerd Font](https://www.nerdfonts.com) in the terminal (I use FiraCode Nerd Font). On Windows, install Starship itself with `winget install Starship.Starship`.

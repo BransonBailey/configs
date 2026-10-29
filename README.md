@@ -5,6 +5,7 @@ Personal dotfiles.
 | Dir | Contents |
 | --- | --- |
 | `nvim/` | Neovim 0.12 + [LazyVim](https://lazyvim.org) config, with the Gotham colourscheme |
+| `fastfetch/` | [fastfetch](https://github.com/fastfetch-cli/fastfetch) system info with a Batman logo |
 
 ## nvim
 
@@ -47,3 +48,13 @@ Import-Module PSFzf
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
 Set-PSReadLineKeyHandler -Key Alt+c -ScriptBlock { Invoke-FzfSetLocation }
 ```
+
+## fastfetch
+
+`fastfetch/config.jsonc` plus `batman.txt`, the ASCII logo it points to. The config refers to the logo as `~/.config/fastfetch/batman.txt`, so copy both files into that folder (on Windows, `~\.config\fastfetch`):
+
+```sh
+mkdir -p ~/.config/fastfetch && cp ~/configs/fastfetch/* ~/.config/fastfetch/
+```
+
+Install fastfetch with `winget install Fastfetch-cli.Fastfetch` on Windows. Run `fastfetch` to try it.
